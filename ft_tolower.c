@@ -6,11 +6,12 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 20:04:34 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/06 20:04:38 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:05:39 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libft_bonus.h"
 
 int	ft_tolower(int c)
 {

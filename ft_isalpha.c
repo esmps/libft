@@ -6,11 +6,12 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 18:45:17 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/06 20:04:27 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:06:08 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libft_bonus.h"
 
 int	ft_isalpha(int c)
 {

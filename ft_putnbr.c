@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 20:05:35 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 15:05:23 by epines-s         ###   ########.fr       */
+/*   Created: 2020/03/07 15:29:48 by epines-s          #+#    #+#             */
+/*   Updated: 2020/03/07 17:19:30 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
-int	ft_toupper(int c)
+void	ft_putnbr(int n)
 {
-	if (ft_isupper(c))
-		c = c - 'a' + 'A';
-	return (c);
+	ft_putnbr_fd(n, 1);
 }

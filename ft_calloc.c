@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 20:05:35 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 15:05:23 by epines-s         ###   ########.fr       */
+/*   Created: 2020/03/07 13:38:30 by epines-s          #+#    #+#             */
+/*   Updated: 2020/03/07 14:16:57 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
-int	ft_toupper(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (ft_isupper(c))
-		c = c - 'a' + 'A';
-	return (c);
+	void	*str;
+	size_t	i;
+
+	i = count * size;
+	str = (void *)malloc(i);
+	if (!str)
+		return (NULL);
+	ft_bzero(str, i);
+	return (str);
 }

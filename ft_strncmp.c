@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 20:23:52 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/06 20:58:10 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/07 13:26:38 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	
+	int	i;
+
+	i = 0;
+	while (n > 0)
+	{
+		if (s1[i] == s2[i])
+		{
+			i++;
+			n--;
+		}
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (0);
+}

@@ -6,11 +6,12 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 16:02:45 by epines-s          #+#    #+#             */
-/*   Updated: 2020/02/19 17:03:17 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/07 15:06:31 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libft_bonus.h"
 
 static size_t	int_len(int num)
 {

@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 20:05:35 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 15:05:23 by epines-s         ###   ########.fr       */
+/*   Created: 2020/03/07 13:31:55 by epines-s          #+#    #+#             */
+/*   Updated: 2020/03/07 13:34:57 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
 
-int	ft_toupper(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (ft_isupper(c))
-		c = c - 'a' + 'A';
-	return (c);
+	char	*s;
+	int		i;
+
+	i = 0;
+	s = (char *)malloc(sizeof(ft_strlen(s1) + 1));
+	while (s1[i] != '\0')
+	{
+		s[i] = s1[i];
+		i++;
+	}
+	s[i] = '\0';
+	return (s);
 }
