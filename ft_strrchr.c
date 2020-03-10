@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 19:29:13 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/06 20:08:08 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 15:23:43 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 
 	ch = (char)c;
 	i = ft_strlen(s);
-	while (s)
+	if (!s)
+		return (NULL);
+	while (i >= 0)
 	{
 		if (s[i] == ch)
 			return ((char *)s + i);

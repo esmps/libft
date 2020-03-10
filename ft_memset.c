@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 18:45:57 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/06 19:27:10 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 14:29:00 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t			i;
 
 	i = 0;
+	str = (char *)b;
 	ch = (unsigned char)c;
-	if (!str || !c || !len)
-		return (NULL);
-	while (str[i] && len > 0)
+	while (len > 0)
 	{
 		str[i] = ch;
 		i++;

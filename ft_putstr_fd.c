@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 12:51:48 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 13:36:19 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 17:19:52 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, "s", ft_strlen(s) + 1);
+	if (s)
+	{
+		while (*s != '\0')
+		{
+			ft_putchar_fd(*s, fd);
+			s++;
+		}
+	}
 }

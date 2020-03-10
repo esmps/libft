@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 14:29:28 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 14:48:14 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 19:03:33 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*d;
-	char	*s;
-	char	*temp;
-	size_t	i;
+	char 	*d;
+	const char	*s;
 
-	i = 0;
 	d = (char *)dst;
-	s = (char *)src;
-	while (s && len > 0)
+	s = (const char *)src;
+	if (!d && !s)
+		return (NULL);
+	if (s >= d)
+		ft_memcpy(d, s, len);
+	else if (s < d)
 	{
-		temp[i] = s[i];
-		i++;
+		while (len)
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
 	}
-	i = 0;
-	while (temp)
-	{
-		d[i] = temp[i];
-		i++;
-	}
-	d[i] = '\0';
 	return (d);
 }

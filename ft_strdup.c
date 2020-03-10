@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 13:31:55 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 13:34:57 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 15:33:15 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	i = 0;
-	s = (char *)malloc(sizeof(ft_strlen(s1) + 1));
+	s = (char *)malloc(ft_strlen(s1) + 1);
+	if (!s)
+	{
+		free(s);
+		return (NULL);
+	}
 	while (s1[i] != '\0')
 	{
 		s[i] = s1[i];

@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 20:04:34 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 15:05:39 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 14:54:32 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_tolower(int c)
 {
-	if (ft_islower(c))
-		c = c - 'A' + 'a';
-	return (0);
+	if (ft_isupper(c))
+		c = c + 32;
+	return (c);
 }

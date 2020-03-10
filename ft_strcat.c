@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 12:14:13 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 17:56:50 by epines-s         ###   ########.fr       */
+/*   Created: 2020/03/09 13:28:45 by epines-s          #+#    #+#             */
+/*   Updated: 2020/03/09 16:38:16 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char	*ft_strcat(char *dst, const char *src)
 {
 	int i;
 	int	j;
 
-	i = 0;
-	if (!*needle)
-		return ((char *)haystack);
-	while (haystack[i])
+	j = 0;
+	i = ft_strlen(dst);
+	while (src[j])
 	{
-		j = 0;
-		while (haystack[i + j] != '\0' && haystack[i + j] == needle[j])
-		{
-			if (needle[j + 1] == '\0')
-				return ((char *)(haystack + i));
-			j++;
-		}
-		i++;
+		dst[i + j] = src[j];
+		j++;
 	}
-	return (NULL);
+	dst[i + j] = '\0';
+	return (dst);
 }

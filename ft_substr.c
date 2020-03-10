@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:52:36 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 16:02:58 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 17:06:14 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
-	if (!len || !start || !s)
+	if (!len || !s)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
 	while (len > 0)
@@ -30,5 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 		len--;
 	}
+	str[i] = '\0';
 	return (str);
 }

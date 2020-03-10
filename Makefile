@@ -51,7 +51,8 @@ BONUSSRCS =  ft_isupper.c	\
 			 ft_strcpy.c	\
 			 ft_abs.c		\
 			 ft_pow.c		\
-			 ft_isspace.c	
+			 ft_isspace.c	\
+			 ft_strcat.c	 
 
 OBJS = $(SRCS:.c=.o)
 	

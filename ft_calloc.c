@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 13:38:30 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/07 14:16:57 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/09 16:00:03 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	*ft_calloc(size_t count, size_t size)
 	i = count * size;
 	str = (void *)malloc(i);
 	if (!str)
+	{	
+		free(str);
 		return (NULL);
+	}
 	ft_bzero(str, i);
 	return (str);
 }
