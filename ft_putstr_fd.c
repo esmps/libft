@@ -6,13 +6,13 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 12:51:48 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 17:19:52 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/10 20:06:14 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	if (s)
 	{

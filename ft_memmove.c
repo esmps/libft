@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 14:29:28 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 19:03:33 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/10 22:17:32 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char 	*d;
+	char		*d;
 	const char	*s;
 
 	d = (char *)dst;

@@ -6,16 +6,29 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 18:45:17 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 14:43:50 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/11 12:32:44 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
+
+static int	islower(int c)
+{
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
+}
+
+static int	isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
+}
 
 int	ft_isalpha(int c)
 {
-	if (ft_isupper(c) || ft_islower(c))
+	if (isupper(c) || islower(c))
 		return (1);
 	return (0);
 }

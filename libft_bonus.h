@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 13:56:28 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 15:46:35 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/10 22:19:45 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int		ft_isspace(char c);
 int		ft_pow(int n, int p);
 int		ft_abs(int n);
 int		ft_putchar(int c);
-void	ft_putstr(char *s);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
 int		ft_putnbr(int n);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strcat(char *dst, const char *src);
-
 
 #endif

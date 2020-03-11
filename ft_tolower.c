@@ -6,16 +6,22 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 20:04:34 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 14:54:32 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/11 12:41:30 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft_bonus.h"
+
+static int	isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
+}
 
 int	ft_tolower(int c)
 {
-	if (ft_isupper(c))
+	if (isupper(c))
 		c = c + 32;
 	return (c);
 }

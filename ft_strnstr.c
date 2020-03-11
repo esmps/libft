@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 12:54:00 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/09 18:07:03 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/10 22:12:38 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		j = 0;
 		templen = len - i;
-		while (templen > 0 && haystack[i + j] != '\0' && haystack[i + j] == needle[j])
+		while (templen > 0 && haystack[i + j] \
+				!= '\0' && haystack[i + j] == needle[j])
 		{
 			if (needle[j + 1] == '\0')
 				return ((char *)(haystack + i));

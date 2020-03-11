@@ -20,13 +20,10 @@ SRCS = 	ft_atoi.c 			\
  		ft_memcpy.c 		\
  		ft_memmove.c 		\
  		ft_memset.c 		\
- 		ft_putchar.c 		\
- 		ft_putchar_fd.c 	\
+  		ft_putchar_fd.c 	\
  		ft_putendl_fd.c 	\
- 		ft_putnbr.c 		\
- 		ft_putnbr_fd.c 		\
- 		ft_putstr.c 		\
- 		ft_putstr_fd.c 		\
+  		ft_putnbr_fd.c 		\
+  		ft_putstr_fd.c 		\
  		ft_strchr.c 		\
  		ft_strdup.c 		\
  		ft_strjoin.c 		\
@@ -40,19 +37,22 @@ SRCS = 	ft_atoi.c 			\
   		ft_substr.c 		\
 		ft_tolower.c 		\
  		ft_toupper.c 		\
-		ft_itoa.c			
+		ft_itoa.c			\
+		ft_split.c			\
+		ft_strtrim.c		
 
-BONUSSRCS =  ft_isupper.c	\
-			 ft_islower.c	\
-			 ft_putchar.c	\
-			 ft_putstr.c	\
-			 ft_putnbr.c	\
-			 ft_strstr.c	\
-			 ft_strcpy.c	\
-			 ft_abs.c		\
-			 ft_pow.c		\
-			 ft_isspace.c	\
-			 ft_strcat.c	 
+BONUSSRCS =  ft_isupper_bonus.c	\
+			 ft_islower_bonus.c	\
+			 ft_putchar_bonus.c	\
+			 ft_putstr_bonus.c	\
+			 ft_putendl_bonus.c	\
+			 ft_putnbr_bonus.c	\
+			 ft_strstr_bonus.c	\
+			 ft_strcpy_bonus.c	\
+			 ft_abs_bonus.c		\
+			 ft_pow_bonus.c		\
+			 ft_isspace_bonus.c	\
+			 ft_strcat_bonus.c	 
 
 OBJS = $(SRCS:.c=.o)
 	
@@ -61,8 +61,8 @@ BONUSOBJS = $(BONUSSRCS:.c=.o)
 all: $(NAME)
 
 $(NAME):
-		gcc -c $(FLAGS) -I $(HEADER) $(BONUSHEADER) $(SRCS) $(BONUSSRCS)
-		ar rc $(NAME) $(OBJS) $(BONUSOBJS)
+		gcc -c $(FLAGS) -I $(HEADER) $(SRCS)
+		ar rc $(NAME) $(OBJS)
 		ranlib $(NAME)
 bonus: 
 		gcc -c $(FLAGS) -I $(BONUSHEADER) $(BONUSSRCS)

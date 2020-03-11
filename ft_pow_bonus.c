@@ -1,46 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 14:49:51 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/11 12:31:21 by epines-s         ###   ########.fr       */
+/*   Created: 2020/02/18 16:05:45 by epines-s          #+#    #+#             */
+/*   Updated: 2020/02/19 15:49:01 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		isspace(char c)
+int	ft_pow(int n, int p)
 {
-	if (c == '\t' || c == '\n' || c == '\v' \
-			|| c == '\f' || c == '\r' || c == ' ')
-		return (1);
-	return (0);
-}
-
-int	ft_atoi(const char *str)
-{
-	int i;
 	int	res;
-	int	s;
 
-	i = 0;
-	res = 0;
-	s = 1;
-	while (isspace(str[i]) == 1)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	res = 1;
+	if (p < 0)
+		return (0);
+	while (p)
 	{
-		if (str[i] == '-')
-			s = -1;
-		i++;
+		res = res * n;
+		p--;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return (res * s);
+	return (res);
 }
