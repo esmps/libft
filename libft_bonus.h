@@ -23,11 +23,11 @@ int		ft_isspace(char c);
 int		ft_pow(int n, int p);
 int		ft_abs(int n);
 int		ft_putchar(int c);
-void	ft_putstr(char const *s);
-void	ft_putendl(char const *s);
+void		ft_putstr(char const *s);i
+void		ft_putendl(char const *s);
 int		ft_putnbr(int n);
-char	*ft_strstr(const char *haystack, const char *needle);
-char	*ft_strcpy(char *dst, const char *src);
-char	*ft_strcat(char *dst, const char *src);
+char		*ft_strstr(const char *haystack, const char *needle);
+char		*ft_strcpy(char *dst, const char *src);
+char		*ft_strcat(char *dst, const char *src);
 
 #endif
