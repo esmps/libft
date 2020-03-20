@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 18:45:17 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/11 12:32:44 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/20 13:06:43 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	isupper(int c)
 	return (0);
 }
 
-int	ft_isalpha(int c)
+int			ft_isalpha(int c)
 {
 	if (isupper(c) || islower(c))
 		return (1);

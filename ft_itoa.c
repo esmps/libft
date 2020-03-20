@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 16:02:45 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/11 12:41:12 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/20 13:16:48 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ static size_t	int_len(int num)
 	return (i);
 }
 
-static int	_abs(int n)
+static int		ft_abs(int n)
 {
 	if (n >= 0)
 		return (n);
 	return (n * -1);
 }
 
-static int	pow(int n, int p)
+static int		pow(int n, int p)
 {
 	int	res;
 
@@ -65,7 +65,7 @@ char			*ft_itoa(int n)
 		*s++ = '-';
 	while (n)
 	{
-		*s++ = _abs(n / x) + '0';
+		*s++ = ft_abs(n / x) + '0';
 		n = n % x;
 		x = x / 10;
 	}

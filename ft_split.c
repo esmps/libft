@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 16:36:13 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/11 12:21:54 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/20 13:06:26 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,29 +50,39 @@ static int	count_word_len(char const *s, char c)
 	return (j);
 }
 
+static char	*ft_strnew(size_t size)
+{
+	char	*word;
+
+	if (!(word = (char *)malloc(sizeof(char) * size)))
+		return (NULL);
+	ft_bzero(word, size);
+	return (word);
+}
+
 char		**ft_split(char const *s, char c)
 {
 	int		i;
-	int		j;
 	int		k;
+	int		j;
+	int		words;
 	char	**arr;
 
-	i = 0;
-	k = 0;
 	if (!s)
 		return (NULL);
-	if (!(arr = (char **)malloc(sizeof(char *) * count_words(s, c))))
+	i = -1;
+	k = 0;
+	words = count_words(s, c);
+	if (!(arr = (char **)malloc(sizeof(char *) * words)))
 		return (NULL);
-	while (i < count_words(s, c) - 1)
+	while (++i < words - 1)
 	{
 		j = 0;
 		while (s[k] == c)
 			k++;
-		if (!(arr[i] = (char *)malloc(sizeof(char) * count_word_len(s, c))))
-			return (NULL);
+		arr[i] = ft_strnew(count_word_len(s, c));
 		while (s[k] != c)
 			arr[i][j++] = s[k++];
-		i++;
 	}
 	arr[i] = NULL;
 	return (arr);

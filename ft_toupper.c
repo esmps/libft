@@ -6,7 +6,7 @@
 /*   By: epines-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 20:05:35 by epines-s          #+#    #+#             */
-/*   Updated: 2020/03/11 12:33:44 by epines-s         ###   ########.fr       */
+/*   Updated: 2020/03/20 13:05:29 by epines-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	islower(int c)
 	return (0);
 }
 
-int	ft_toupper(int c)
+int			ft_toupper(int c)
 {
 	if (islower(c))
 		c = c - 32;
